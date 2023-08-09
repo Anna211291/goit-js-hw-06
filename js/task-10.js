@@ -45,4 +45,6 @@ elements.destroyBtn.addEventListener("click", destroyBoxes);
 function destroyBoxes() {
   elements.boxes.innerHTML = "";
   elements.input.value = 0;
+  boxSize = 20;
+  boxText = 6;
 }

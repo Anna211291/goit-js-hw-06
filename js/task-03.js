@@ -15,7 +15,7 @@ const images = [
 const gallery = document.querySelector(".gallery");
 
 images.flatMap((image) => {
-  const li = `<li><img width = "450" src="${image.url}" alt="${image.alt}"></li>`;
+  const li = `<li><img class="img-item" src="${image.url}" alt="${image.alt}"></li>`;
   gallery.insertAdjacentHTML("afterbegin", li)
   
 })
@@ -26,6 +26,7 @@ gallery.style.flexWrap = 'wrap'
 gallery.style.gap = '40px'
 gallery.style.listStyle = 'none'
 gallery.style.padding = '26px'
+
 
 
 
