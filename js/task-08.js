@@ -12,6 +12,6 @@ function hendlerSubmit(evt) {
     return alert("Please fill in all the fields!");
     }
  
-console.log({ Email: email.value, Password: password.value });
+console.log({ email: email.value, password: password.value });
   evt.currentTarget.reset();
 }

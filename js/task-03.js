@@ -14,11 +14,26 @@ const images = [
 ];
 const gallery = document.querySelector(".gallery");
 
-images.flatMap((image) => {
-  const li = `<li><img class="img-item" width="450" src="${image.url}" alt="${image.alt}"></li>`;
-  gallery.insertAdjacentHTML("afterbegin", li)
-  
-})
+function galleryList(arr) {
+  const image = arr.flatMap(({ url, alt }) => {
+    const li = `<li><img class="img-item" width="450" src="${url}" alt="${alt}"></li>`;
+    return li;
+  }).join("");
+  gallery.insertAdjacentHTML("afterbegin", image);
+}
+
+galleryList(images);
+
+// const galleryArr = [];
+
+
+// images.flatMap((image) => {
+//   const li = `<li><img class="img-item" width="450" src="${image.url}" alt="${image.alt}"></li>`;
+//   galleryArr.push(li);
+
+// })
+
+// gallery.insertAdjacentHTML("afterbegin", galleryArr);
 
 gallery.style.display = 'flex'
 gallery.style.flexDirection = 'row'

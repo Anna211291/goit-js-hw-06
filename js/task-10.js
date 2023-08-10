@@ -33,11 +33,16 @@ if (elements.input.value >= 1 && elements.input.value <= 100)
     box.textContent = `Color: ${getRandomHexColor()}`;
     box.style.fontSize = `${boxText}px`;
     box.style.color = "#000"
-    
-  boxesArr.push(box);
+    boxesArr.push(box);
+
+     if (boxesArr.includes()) {
+      break;
+    }
    
   }
+ 
   elements.boxes.append(...boxesArr);
+  
 }
 
 elements.destroyBtn.addEventListener("click", destroyBoxes);
