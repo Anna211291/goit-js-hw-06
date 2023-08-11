@@ -34,11 +34,8 @@ if (elements.input.value >= 1 && elements.input.value <= 100)
     box.style.fontSize = `${boxText}px`;
     box.style.color = "#000"
     boxesArr.push(box);
-
-     if (boxesArr.includes()) {
-      break;
-    }
-   
+    elements.createBtn.disabled = true;
+    elements.destroyBtn.disabled = false;
   }
  
   elements.boxes.append(...boxesArr);
@@ -52,4 +49,6 @@ function destroyBoxes() {
   elements.input.value = 0;
   boxSize = 20;
   boxText = 6;
+  elements.createBtn.disabled = false;
+  elements.destroyBtn.disabled = true;
 }
